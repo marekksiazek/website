@@ -1,0 +1,558 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.hide {
+    opacity: 0
+}
+
+.show {
+    opacity: 1;
+    transition: 0.5s linear;
+}
+
+html {
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+}
+
+.header {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: #cccccc;
+}
+
+.header img.photoFirst {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 60%;
+    z-index: 1;
+    animation: firstPhoto 4s linear infinite alternate;
+}
+
+.header img.photoBack {
+    position: absolute;
+    bottom: 0;
+    left: -30%;
+    height: 110%;
+    opacity: 0.2;
+    animation: photoBack 4s linear infinite alternate;
+}
+
+.header div.welcome {
+    position: absolute;
+    top: 20%;
+    text-align: center;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: text 6s linear 1 both;
+
+}
+
+.welcome h1 {
+    font-size: 3rem;
+}
+
+.welcome h2 {
+    margin: 0 5%;
+    padding-bottom: 20px;
+    font-size: 2rem;
+    border-bottom: 2px solid black;
+}
+
+@keyframes firstPhoto {
+
+    100% {
+        transform: translateX(-8%);
+    }
+}
+
+@keyframes photoBack {
+    100% {
+        transform: translateX(-8%);
+        transform: scale(1.1);
+    }
+}
+
+@keyframes text {
+    0% {
+        transform: scale(0.8);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+section:nth-of-type(even) {
+    background-color: #cccccc;
+}
+
+section.features {
+    width: 100%;
+}
+
+section.features h1 {
+    margin: 3% auto;
+    padding: 5% 5%;
+    text-align: center;
+    font-size: 2.4rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+div.feature {
+    padding: 8%;
+    text-align: center;
+}
+
+div.feature img {
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+div.feature h2 {
+    padding-bottom: 3%;
+    margin-bottom: 4%;
+    border-bottom: 1px solid black;
+    font-size: 1.8rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+div.feature p {
+    font-size: 1.6rem;
+    line-height: 150%;
+}
+
+section.skills {
+    padding: 8%;
+    text-align: center;
+}
+
+section.skills h1 {
+    width: 100%;
+    margin-bottom: 5%;
+    padding-bottom: 4%;
+    border-bottom: 1px solid black;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+section.skills p {
+    font-size: 1.6rem;
+    line-height: 150%;
+    margin-bottom: 15%;
+}
+
+section.skills div {
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+section.skills div img {
+    width: 60%;
+    margin: 0 auto 10% auto;
+}
+
+section.skills div p {
+    margin: 5% 20%;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-weight: bold;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+section.aboutme {
+    width: 100%;
+    margin-bottom: 10%;
+    text-align: center;
+}
+
+section.aboutme h1 {
+    margin: 5% 8%;
+    padding-bottom: 4%;
+    border-bottom: 1px solid black;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+section.aboutme div.about img {
+    margin: 5% auto;
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+}
+
+section.aboutme div.about div {
+    width: 100%;
+}
+
+section.aboutme div.about div p {
+    padding: 5% 8%;
+    font-size: 1.6rem;
+    line-height: 150%;
+}
+
+section.aboutme div.about div p span {
+    font-weight: bold;
+}
+
+section.contact {
+    padding-top: 1%;
+    text-align: center;
+    width: 100%;
+}
+
+section.contact h1 {
+    margin: 5% 8%;
+    padding-bottom: 4%;
+    border-bottom: 1px solid black;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+section.contact div.socials {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+section.contact div.social {
+    display: flex;
+    padding-bottom: 5%;
+    padding-left: 5%;
+}
+
+section.contact div.social img {
+    flex-basis: 20%;
+    padding-right: 10%;
+}
+
+section.contact div.social span {
+    display: flex;
+    justify-content: center;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+
+section.contact div.social span a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+@media (orientation:portrait) and (min-width:767px) {
+    .header div.welcome {
+        top: 20%;
+        text-align: right;
+        width: 100%;
+
+    }
+
+    .welcome h1 {
+        margin-right: 5%;
+        font-size: 5rem;
+    }
+
+    .welcome h2 {
+        font-size: 4rem;
+        margin-left: 20%;
+    }
+
+    section.features h1 {
+        font-size: 3rem;
+    }
+
+    div.feature {
+        padding-bottom: 0;
+    }
+
+    div.feature h2 {
+        border-bottom: 1.5px solid black;
+        font-size: 2.4rem;
+    }
+
+    div.feature p {
+        font-size: 2rem;
+        line-height: 200%;
+    }
+
+    section.skills {
+        padding: 8%;
+        text-align: center;
+    }
+
+    section.skills h1 {
+        border-bottom: 1.5px solid black;
+        font-size: 3rem;
+        letter-spacing: 2px;
+    }
+
+    section.skills p {
+        font-size: 2.4rem;
+        line-height: 200%;
+        margin-bottom: 15%;
+    }
+
+    div.wrapp {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    div.wrapp div.skill {
+        flex-basis: 50%;
+    }
+
+    section.aboutme h1 {
+        border-bottom: 1.5px solid black;
+        font-size: 3rem;
+        letter-spacing: 2px;
+    }
+
+    section.aboutme div.about div p {
+        font-size: 2.4rem;
+    }
+
+    section.contact h1 {
+        border-bottom: 1.5px solid black;
+        font-size: 3rem;
+        letter-spacing: 2px;
+    }
+
+    section.contact div.socials {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    section.contact div.social {
+        flex-basis: 100%;
+        display: flex;
+        padding-bottom: 10%;
+        padding-left: 5%;
+    }
+
+    section.contact div.social img {
+        flex-basis: 20%;
+        height: 150%;
+    }
+
+    section.contact div.social span {
+
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        font-size: 2.4rem;
+        letter-spacing: 1px;
+    }
+
+}
+
+@media (orientation:landscape) {
+    .header img.photoFirst {
+        position: absolute;
+        bottom: 0;
+        right: 10%;
+        height: 60%;
+    }
+
+    .header img.photoBack {
+        position: absolute;
+        bottom: 0;
+        left: 10%;
+    }
+
+    .header div.welcome {
+        position: absolute;
+        top: 10%;
+        text-align: right;
+        width: 100%;
+
+    }
+
+    .welcome h1 {
+        margin-right: 5%;
+    }
+
+    .welcome h2 {
+        margin-right: 5%;
+        margin-left: 40%;
+    }
+
+    section.features h1 {
+        margin: 3% auto 0 auto;
+        padding: 0 5%;
+    }
+
+    div.feature img {
+        margin-bottom: 2%;
+    }
+
+}
+
+@media (orientation:landscape) and (min-width: 660px) {
+    div.wrapp {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    div.wrapp div.skill {
+        flex-basis: 50%;
+    }
+
+
+}
+
+@media (orientation:landscape) and (min-width:812px) {
+    div.feature {
+        padding-bottom: 0;
+    }
+}
+
+@media (orientation:landscape) and (min-width:1024px) {
+
+    .header div.welcome {
+        top: 10%;
+    }
+
+    .welcome h1 {
+        font-size: 6rem;
+    }
+
+    .welcome h2 {
+        margin: 0 5%;
+        margin-left: 30%;
+        padding-bottom: 20px;
+        font-size: 4rem;
+    }
+
+    section.features h1 {
+        margin: 5% auto 0 auto;
+        font-size: 3.5rem;
+    }
+
+    div.wrappFeature {
+        display: flex;
+        align-items: baseline;
+    }
+
+    div.feature {
+        flex-basis: 25%;
+        padding: 5%;
+        text-align: center;
+    }
+
+    div.feature h2 {
+        border-bottom: 1.5px solid black;
+    }
+
+    div.feature p {
+        text-align: center;
+        font-size: 1.8rem;
+        line-height: 150%;
+    }
+
+    section.skills h1 {
+        border-bottom: 2px solid black;
+        font-size: 3.5rem;
+    }
+
+
+    section.skills p {
+        font-size: 2.4rem;
+    }
+
+    div.wrapp {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    div.wrapp div.skill {
+        flex-basis: 30%;
+        margin-bottom: 5%;
+    }
+
+    section.aboutme h1 {
+        border-bottom: 2px solid black;
+        font-size: 4rem;
+    }
+
+    section.aboutme div.about img {
+        float: left;
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 30%;
+        height: 30%;
+    }
+
+    section.aboutme div.about div p {
+        padding: 5% 8%;
+        font-size: 2.4rem;
+        line-height: 150%;
+    }
+
+    section.contact h1 {
+        border-bottom: 2px solid black;
+        font-size: 4rem;
+    }
+
+    section.contact div.socials {
+        justify-content: space-around;
+        align-content: space-around;
+    }
+
+    section.contact div.social {
+        flex-basis: 40%;
+        display: flex;
+        justify-content: space-around;
+        align-content: space-around;
+    }
+
+    section.contact div.social span {
+        display: flex;
+        font-size: 2.4rem;
+        letter-spacing: 1px;
+    }
+
+}
+
+@media (orientation:landscape) and (min-width:1220px) {
+    section.contact h1 {
+        border-bottom: 2px solid black;
+        font-size: 4rem;
+    }
+
+    section.contact div.socials {
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-content: space-around;
+    }
+
+    section.contact div.social {
+        flex-basis: 20%;
+        display: flex;
+        justify-content: space-around;
+        align-content: space-around;
+    }
+
+    section.contact div.social span {
+        font-size: 1.6rem;
+    }
+}
